@@ -107,7 +107,7 @@ def main():
 
     w("# Assignment 3 - Edge Computing & Intelligent Systems\n")
     w("## Model Optimization: Quantization (PTQ, QAT) and Pruning (Unstructured, Structured) of ResNet-18 on CIFAR-10\n")
-    w("Name: Syed M. Alyun  Roll No: 23I-0022  Section: AI-A7  \n")
+    w("Name: Syed M. Alyun  \nRoll No: 23I-0022  \nSection: AI-A7  \n")
 
     w("## 1. Environment\n")
     w(f"- Python {platform.python_version()}, PyTorch {torch.__version__}, OS: {platform.system()} {platform.machine()}")

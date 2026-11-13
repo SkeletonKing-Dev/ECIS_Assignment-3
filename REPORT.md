@@ -2,7 +2,9 @@
 
 ## Model Optimization: Quantization (PTQ, QAT) and Pruning (Unstructured, Structured) of ResNet-18 on CIFAR-10
 
-Name: Syed M. Alyun  Roll No: 23I-0022  Section: AI-A7  
+Name: Syed M. Alyun  
+Roll No: 23I-0022  
+Section: AI-A7  
 
 ## 1. Environment
 
