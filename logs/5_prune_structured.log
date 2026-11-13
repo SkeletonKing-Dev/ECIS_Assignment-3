@@ -1,0 +1,24 @@
+Original: acc 93.94%  params 11,173,962  MACs 555.4M
+Channel config (mid channels per block):
+    64 ->   32
+    64 ->   32
+   128 ->   64
+   128 ->   64
+   256 ->  128
+   256 ->  128
+   512 ->  256
+   512 ->  256
+Pruned (before fine-tune): acc 38.21%  params 5,679,306 (50.8%)  MACs 281.7M (50.7%)
+  [structured] fine-tune epoch 1/10  loss 0.1082  train 96.33%  test 89.90%
+  [structured] fine-tune epoch 2/10  loss 0.1349  train 95.27%  test 89.75%
+  [structured] fine-tune epoch 3/10  loss 0.1457  train 94.95%  test 90.01%
+  [structured] fine-tune epoch 4/10  loss 0.1304  train 95.39%  test 89.86%
+  [structured] fine-tune epoch 5/10  loss 0.1185  train 95.96%  test 90.44%
+  [structured] fine-tune epoch 6/10  loss 0.1019  train 96.50%  test 90.90%
+  [structured] fine-tune epoch 7/10  loss 0.0817  train 97.25%  test 91.63%
+  [structured] fine-tune epoch 8/10  loss 0.0545  train 98.27%  test 93.11%
+  [structured] fine-tune epoch 9/10  loss 0.0322  train 99.07%  test 93.61%
+  [structured] fine-tune epoch 10/10  loss 0.0242  train 99.32%  test 93.85%
+Pruned (after fine-tune): acc 93.85%
+Saved -> /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/structured_pruned_resnet18.pth (21.74 MB, original 42.70 MB)
+Reloaded accuracy: 93.85%

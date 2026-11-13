@@ -1,0 +1,7 @@
+model,key,runtime,precision,accuracy_%,size_mb,latency_b1_ms,latency_b1_p95_ms,throughput_img_s,acc_change_pts,compression_x,speedup_b1_x
+FP32 baseline,fp32,ONNX Runtime,FP32,93.9400,42.6160,12.9897,13.6804,78.3969,0.0000,1.0000,1.0000
+PTQ INT8,ptq,ONNX Runtime,INT8,93.4300,10.7676,7.1860,7.7934,153.6916,-0.5100,3.9578,1.8076
+QAT INT8,qat,ONNX Runtime,INT8,93.5300,10.7712,7.2268,7.6665,153.8484,-0.4100,3.9565,1.7974
+Unstructured pruned,unstructured,ONNX Runtime,FP32,94.0000,42.6160,12.9529,13.5793,83.2465,0.0600,1.0000,1.0028
+Structured pruned,structured,ONNX Runtime,FP32,93.8500,21.6592,6.5907,7.0950,169.1935,-0.0900,1.9676,1.9709
+Structured pruned + PTQ INT8 (bonus),structured_ptq,ONNX Runtime,INT8,93.0800,5.5137,3.6786,3.9907,290.4285,-0.8600,7.7291,3.5312

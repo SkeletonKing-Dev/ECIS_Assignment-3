@@ -1,0 +1,46 @@
+Original FP32 accuracy: 93.94%
+Iteration 1/4: sparsity 33.13%  acc after pruning 93.89%
+  [iter 1] fine-tune epoch 1/2  loss 0.0299  train 99.10%  test 93.59%
+  [iter 1] fine-tune epoch 2/2  loss 0.0259  train 99.25%  test 93.98%
+  -> after fine-tuning: 93.98%  (masks keep pruned weights at zero)
+Iteration 2/4: sparsity 55.28%  acc after pruning 93.56%
+  [iter 2] fine-tune epoch 1/2  loss 0.0254  train 99.32%  test 93.77%
+  [iter 2] fine-tune epoch 2/2  loss 0.0217  train 99.44%  test 94.03%
+  -> after fine-tuning: 94.03%  (masks keep pruned weights at zero)
+Iteration 3/4: sparsity 70.09%  acc after pruning 91.63%
+  [iter 3] fine-tune epoch 1/2  loss 0.0262  train 99.41%  test 93.64%
+  [iter 3] fine-tune epoch 2/2  loss 0.0212  train 99.50%  test 94.05%
+  -> after fine-tuning: 94.05%  (masks keep pruned weights at zero)
+Iteration 4/4: sparsity 80.00%  acc after pruning 88.66%
+  [iter 4] fine-tune epoch 1/5  loss 0.0316  train 99.50%  test 93.85%
+  [iter 4] fine-tune epoch 2/5  loss 0.0249  train 99.40%  test 93.71%
+  [iter 4] fine-tune epoch 3/5  loss 0.0203  train 99.54%  test 93.57%
+  [iter 4] fine-tune epoch 4/5  loss 0.0170  train 99.61%  test 93.91%
+  [iter 4] fine-tune epoch 5/5  loss 0.0141  train 99.72%  test 94.00%
+  -> after fine-tuning: 94.00%  (masks keep pruned weights at zero)
+Final: sparsity 80.00%  non-zero params 2,242,480/11,173,962  accuracy 94.00%
+Per-layer sparsity (global threshold):
+  conv1                      1,728 weights    6.66% zero
+  layer1.0.conv1            36,864 weights   32.19% zero
+  layer1.0.conv2            36,864 weights   26.94% zero
+  layer1.1.conv1            36,864 weights   26.66% zero
+  layer1.1.conv2            36,864 weights   27.34% zero
+  layer2.0.conv1            73,728 weights   29.42% zero
+  layer2.0.conv2           147,456 weights   31.93% zero
+  layer2.0.shortcut.0        8,192 weights   15.97% zero
+  layer2.1.conv1           147,456 weights   33.64% zero
+  layer2.1.conv2           147,456 weights   36.98% zero
+  layer3.0.conv1           294,912 weights   37.56% zero
+  layer3.0.conv2           589,824 weights   42.59% zero
+  layer3.0.shortcut.0       32,768 weights   22.52% zero
+  layer3.1.conv1           589,824 weights   45.15% zero
+  layer3.1.conv2           589,824 weights   57.32% zero
+  layer4.0.conv1         1,179,648 weights   73.00% zero
+  layer4.0.conv2         2,359,296 weights   93.37% zero
+  layer4.0.shortcut.0      131,072 weights   51.26% zero
+  layer4.1.conv1         2,359,296 weights   96.03% zero
+  layer4.1.conv2         2,359,296 weights   99.38% zero
+  fc                         5,120 weights    4.16% zero
+Saved dense  -> /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/unstructured_pruned_resnet18.pth (42.70 MB)
+Saved sparse -> /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/unstructured_pruned_resnet18_sparse.pth (10.17 MB)
+Sparse checkpoint reload accuracy: 94.00%

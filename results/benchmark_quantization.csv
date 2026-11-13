@@ -1,0 +1,4 @@
+model,key,runtime,precision,accuracy_%,size_mb,params,nonzero_params,sparsity_%,macs_M,latency_b1_ms,latency_b1_p95_ms,throughput_img_s,acc_change_pts,compression_x,speedup_b1_x
+FP32 baseline,fp32,PyTorch,FP32,93.9400,42.7028,11173962,11173962,0.0000,555.4227,19.6936,23.3015,63.6011,0.0000,1.0000,1.0000
+PTQ INT8,ptq,PyTorch,INT8,93.8900,10.7701,11173962,11173962,0.0000,555.4227,8.0168,8.5044,122.1782,-0.0500,3.9650,2.4565
+QAT INT8,qat,PyTorch,INT8,93.9200,10.7701,11173962,11173962,0.0000,555.4227,8.0714,8.7055,127.5954,-0.0200,3.9649,2.4399

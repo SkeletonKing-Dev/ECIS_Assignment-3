@@ -1,0 +1,33 @@
+Device: cuda
+Epoch   1/30  loss 1.3796  train 49.92%  test 59.70%
+Epoch   2/30  loss 0.9044  train 68.30%  test 67.26%
+Epoch   3/30  loss 0.7268  train 74.97%  test 73.98%
+Epoch   4/30  loss 0.6264  train 78.49%  test 72.18%
+Epoch   5/30  loss 0.5567  train 80.84%  test 69.32%
+Epoch   6/30  loss 0.5010  train 82.87%  test 80.25%
+Epoch   7/30  loss 0.4565  train 84.39%  test 81.00%
+Epoch   8/30  loss 0.4185  train 85.72%  test 83.57%
+Epoch   9/30  loss 0.3933  train 86.51%  test 83.93%
+Epoch  10/30  loss 0.3712  train 87.26%  test 82.62%
+Epoch  11/30  loss 0.3506  train 87.94%  test 82.78%
+Epoch  12/30  loss 0.3369  train 88.43%  test 83.15%
+Epoch  13/30  loss 0.3254  train 88.67%  test 85.85%
+Epoch  14/30  loss 0.3139  train 89.25%  test 85.30%
+Epoch  15/30  loss 0.3002  train 89.59%  test 82.94%
+Epoch  16/30  loss 0.2916  train 89.97%  test 85.88%
+Epoch  17/30  loss 0.2801  train 90.53%  test 83.42%
+Epoch  18/30  loss 0.2703  train 90.68%  test 87.01%
+Epoch  19/30  loss 0.2552  train 91.26%  test 87.63%
+Epoch  20/30  loss 0.2426  train 91.67%  test 82.56%
+Epoch  21/30  loss 0.2242  train 92.23%  test 87.44%
+Epoch  22/30  loss 0.2035  train 93.14%  test 88.80%
+Epoch  23/30  loss 0.1804  train 93.79%  test 90.51%
+Epoch  24/30  loss 0.1557  train 94.62%  test 91.00%
+Epoch  25/30  loss 0.1232  train 95.74%  test 91.11%
+Epoch  26/30  loss 0.0963  train 96.79%  test 92.73%
+Epoch  27/30  loss 0.0636  train 97.95%  test 93.22%
+Epoch  28/30  loss 0.0424  train 98.68%  test 93.54%
+Epoch  29/30  loss 0.0297  train 99.11%  test 93.76%
+Epoch  30/30  loss 0.0255  train 99.32%  test 93.94%
+Training time: 56.9 min
+Best test accuracy: 93.94%  -> saved to /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/fp32_resnet18.pth

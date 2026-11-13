@@ -1,0 +1,5 @@
+cpu: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+threads: 1
+torch: 2.7.1+cu118
+python: 3.11.15
+os: Linux-7.0.0-42-generic-x86_64-with-glibc2.39

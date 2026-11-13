@@ -1,0 +1,42 @@
+
+== fp32 ==  (28.6 ms for 5 images)
+  test[0]      pred: cat        conf 1.000  true: cat  ok
+  test[1]      pred: ship       conf 1.000  true: ship  ok
+  test[2]      pred: ship       conf 0.997  true: ship  ok
+  test[3]      pred: airplane   conf 0.994  true: airplane  ok
+  test[4]      pred: frog       conf 1.000  true: frog  ok
+
+== ptq ==  (14.8 ms for 5 images)
+  test[0]      pred: cat        conf 1.000  true: cat  ok
+  test[1]      pred: ship       conf 1.000  true: ship  ok
+  test[2]      pred: ship       conf 0.998  true: ship  ok
+  test[3]      pred: airplane   conf 0.995  true: airplane  ok
+  test[4]      pred: frog       conf 1.000  true: frog  ok
+
+== qat ==  (14.8 ms for 5 images)
+  test[0]      pred: cat        conf 1.000  true: cat  ok
+  test[1]      pred: ship       conf 1.000  true: ship  ok
+  test[2]      pred: ship       conf 0.996  true: ship  ok
+  test[3]      pred: airplane   conf 0.998  true: airplane  ok
+  test[4]      pred: frog       conf 1.000  true: frog  ok
+
+== unstructured ==  (28.6 ms for 5 images)
+  test[0]      pred: cat        conf 1.000  true: cat  ok
+  test[1]      pred: ship       conf 1.000  true: ship  ok
+  test[2]      pred: ship       conf 0.997  true: ship  ok
+  test[3]      pred: airplane   conf 0.997  true: airplane  ok
+  test[4]      pred: frog       conf 1.000  true: frog  ok
+
+== structured ==  (17.8 ms for 5 images)
+  test[0]      pred: cat        conf 1.000  true: cat  ok
+  test[1]      pred: ship       conf 0.999  true: ship  ok
+  test[2]      pred: ship       conf 0.999  true: ship  ok
+  test[3]      pred: airplane   conf 0.956  true: airplane  ok
+  test[4]      pred: frog       conf 1.000  true: frog  ok
+
+== structured_ptq ==  (10.5 ms for 5 images)
+  test[0]      pred: cat        conf 1.000  true: cat  ok
+  test[1]      pred: ship       conf 0.999  true: ship  ok
+  test[2]      pred: ship       conf 0.999  true: ship  ok
+  test[3]      pred: airplane   conf 0.940  true: airplane  ok
+  test[4]      pred: frog       conf 1.000  true: frog  ok

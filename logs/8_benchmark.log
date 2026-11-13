@@ -1,0 +1,42 @@
+Test images: 10000   CPU threads: 1   torch 2.7.1+cu118
+CPU: Intel(R) Core(TM) i7-7700HQ CPU @ 2.80GHz
+Benchmarking PyTorch fp32 ...
+  acc 93.94%  size 42.70 MB  latency 19.694 ms
+Benchmarking PyTorch ptq ...
+  acc 93.89%  size 10.77 MB  latency 8.017 ms
+Benchmarking PyTorch qat ...
+  acc 93.92%  size 10.77 MB  latency 8.071 ms
+Benchmarking PyTorch unstructured ...
+  acc 94.00%  size 10.17 MB  latency 20.563 ms
+Benchmarking PyTorch structured ...
+  acc 93.85%  size 21.74 MB  latency 10.686 ms
+Benchmarking PyTorch structured_ptq ...
+  acc 93.84%  size 5.52 MB  latency 5.222 ms
+Benchmarking ONNX Runtime fp32 ...
+  acc 93.94%  size 42.62 MB  latency 12.990 ms
+Benchmarking ONNX Runtime ptq ...
+  acc 93.43%  size 10.77 MB  latency 7.186 ms
+Benchmarking ONNX Runtime qat ...
+  acc 93.53%  size 10.77 MB  latency 7.227 ms
+Benchmarking ONNX Runtime unstructured ...
+  acc 94.00%  size 42.62 MB  latency 12.953 ms
+Benchmarking ONNX Runtime structured ...
+  acc 93.85%  size 21.66 MB  latency 6.591 ms
+Benchmarking ONNX Runtime structured_ptq ...
+  acc 93.08%  size 5.51 MB  latency 3.679 ms
+
+                               model      runtime precision  accuracy_%  acc_change_pts  size_mb  compression_x  latency_b1_ms  speedup_b1_x  throughput_img_s
+                       FP32 baseline      PyTorch      FP32       93.94            0.00    42.70           1.00          19.69          1.00             63.60
+                            PTQ INT8      PyTorch      INT8       93.89           -0.05    10.77           3.96           8.02          2.46            122.18
+                            QAT INT8      PyTorch      INT8       93.92           -0.02    10.77           3.96           8.07          2.44            127.60
+                 Unstructured pruned      PyTorch      FP32       94.00            0.06    10.17           4.20          20.56          0.96             62.76
+                   Structured pruned      PyTorch      FP32       93.85           -0.09    21.74           1.96          10.69          1.84            116.82
+Structured pruned + PTQ INT8 (bonus)      PyTorch      INT8       93.84           -0.10     5.52           7.74           5.22          3.77            215.45
+                       FP32 baseline ONNX Runtime      FP32       93.94            0.00    42.62           1.00          12.99          1.00             78.40
+                            PTQ INT8 ONNX Runtime      INT8       93.43           -0.51    10.77           3.96           7.19          1.81            153.69
+                            QAT INT8 ONNX Runtime      INT8       93.53           -0.41    10.77           3.96           7.23          1.80            153.85
+                 Unstructured pruned ONNX Runtime      FP32       94.00            0.06    42.62           1.00          12.95          1.00             83.25
+                   Structured pruned ONNX Runtime      FP32       93.85           -0.09    21.66           1.97           6.59          1.97            169.19
+Structured pruned + PTQ INT8 (bonus) ONNX Runtime      INT8       93.08           -0.86     5.51           7.73           3.68          3.53            290.43
+
+CSV files and plots written to /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/results/

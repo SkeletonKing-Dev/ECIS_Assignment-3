@@ -1,0 +1,24 @@
+Input model: models/structured_pruned_resnet18.pth
+FP32 accuracy ...
+  FP32 test accuracy: 93.85%
+Building PTQ INT8 model ...
+  backend: x86
+  qconfig: QConfig(activation=functools.partial(<class 'torch.ao.quantization.observer.HistogramObserver'>, reduce_range=True){}, weight=functools.partial(<class 'torch.ao.quantization.observer.PerChannelMinMaxObserver'>, dtype=torch.qint8, qscheme=torch.per_channel_symmetric){})
+  calibrated on 2000 images (32 batches)
+  done in 11.0s
+BasicBlock(
+  (conv1): QuantizedConvReLU2d(64, 32, kernel_size=(3, 3), stride=(1, 1), scale=0.01065658126026392, zero_point=0, padding=(1, 1))
+  (bn1): Identity()
+  (relu1): Identity()
+  (conv2): QuantizedConv2d(32, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.03218638524413109, zero_point=69, padding=(1, 1))
+  (bn2): Identity()
+  (relu2): ReLU()
+  (shortcut): Sequential()
+  (add): QFunctional(
+    scale=0.036490581929683685, zero_point=60
+    (activation_post_process): Identity()
+  )
+)
+  PTQ INT8 test accuracy: 93.84%  (change -0.01 pts)
+Saved PTQ model -> models/structured_pruned_ptq_int8_resnet18.pt  (5.52 MB, FP32 input was 21.74 MB)
+  reloaded TorchScript accuracy: 93.84%

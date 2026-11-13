@@ -1,0 +1,24 @@
+Input model: /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/fp32_resnet18.pth
+FP32 accuracy ...
+  FP32 test accuracy: 93.94%
+Building PTQ INT8 model ...
+  backend: x86
+  qconfig: QConfig(activation=functools.partial(<class 'torch.ao.quantization.observer.HistogramObserver'>, reduce_range=True){}, weight=functools.partial(<class 'torch.ao.quantization.observer.PerChannelMinMaxObserver'>, dtype=torch.qint8, qscheme=torch.per_channel_symmetric){})
+  calibrated on 2000 images (32 batches)
+  done in 18.1s
+BasicBlock(
+  (conv1): QuantizedConvReLU2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.011305470950901508, zero_point=0, padding=(1, 1))
+  (bn1): Identity()
+  (relu1): Identity()
+  (conv2): QuantizedConv2d(64, 64, kernel_size=(3, 3), stride=(1, 1), scale=0.036453425884246826, zero_point=72, padding=(1, 1))
+  (bn2): Identity()
+  (relu2): ReLU()
+  (shortcut): Sequential()
+  (add): QFunctional(
+    scale=0.0419265478849411, zero_point=61
+    (activation_post_process): Identity()
+  )
+)
+  PTQ INT8 test accuracy: 93.89%  (change -0.05 pts)
+Saved PTQ model -> /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/ptq_int8_resnet18.pt  (10.77 MB, FP32 input was 42.70 MB)
+  reloaded TorchScript accuracy: 93.89%

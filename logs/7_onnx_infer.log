@@ -1,0 +1,42 @@
+
+== ONNX fp32 ==
+  test[0]      pred: cat        conf 1.000  true: cat
+  test[1]      pred: ship       conf 1.000  true: ship
+  test[2]      pred: ship       conf 0.997  true: ship
+  test[3]      pred: airplane   conf 0.994  true: airplane
+  test[4]      pred: frog       conf 1.000  true: frog
+
+== ONNX ptq ==
+  test[0]      pred: cat        conf 1.000  true: cat
+  test[1]      pred: ship       conf 1.000  true: ship
+  test[2]      pred: ship       conf 1.000  true: ship
+  test[3]      pred: airplane   conf 0.987  true: airplane
+  test[4]      pred: frog       conf 1.000  true: frog
+
+== ONNX qat ==
+  test[0]      pred: cat        conf 1.000  true: cat
+  test[1]      pred: ship       conf 1.000  true: ship
+  test[2]      pred: ship       conf 1.000  true: ship
+  test[3]      pred: airplane   conf 0.994  true: airplane
+  test[4]      pred: frog       conf 1.000  true: frog
+
+== ONNX unstructured ==
+  test[0]      pred: cat        conf 1.000  true: cat
+  test[1]      pred: ship       conf 1.000  true: ship
+  test[2]      pred: ship       conf 0.997  true: ship
+  test[3]      pred: airplane   conf 0.997  true: airplane
+  test[4]      pred: frog       conf 1.000  true: frog
+
+== ONNX structured ==
+  test[0]      pred: cat        conf 1.000  true: cat
+  test[1]      pred: ship       conf 0.999  true: ship
+  test[2]      pred: ship       conf 0.999  true: ship
+  test[3]      pred: airplane   conf 0.956  true: airplane
+  test[4]      pred: frog       conf 1.000  true: frog
+
+== ONNX structured_ptq ==
+  test[0]      pred: cat        conf 1.000  true: cat
+  test[1]      pred: ship       conf 0.984  true: ship
+  test[2]      pred: ship       conf 0.999  true: ship
+  test[3]      pred: airplane   conf 0.994  true: airplane
+  test[4]      pred: frog       conf 1.000  true: frog

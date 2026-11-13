@@ -1,0 +1,24 @@
+FP32 test accuracy: 93.94%
+Inserted 51 FakeQuantize modules
+ConvBnReLU2d(
+  64, 64, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), bias=False
+  (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (weight_fake_quant): FakeQuantize(
+    fake_quant_enabled=tensor([1], dtype=torch.uint8), observer_enabled=tensor([1], dtype=torch.uint8), quant_min=-128, quant_max=127, dtype=torch.qint8, qscheme=torch.per_channel_symmetric, ch_axis=0, scale=tensor([1.]), zero_point=tensor([0], dtype=torch.int32)
+    (activation_post_process): MovingAveragePerChannelMinMaxObserver(min_val=tensor([]), max_val=tensor([]))
+  )
+  (activation_post_process): FakeQuantize(
+    fake_quant_enabled=tensor([1], dtype=torch.uint8), observer_enabled=tensor([1], dtype=torch.uint8), quant_min=0, quant_max=127, dtype=torch.quint8, qscheme=torch.per_tensor_affine, ch_axis=-1, scale=tensor([1.]), zero_point=tensor([0], dtype=torch.int32)
+    (activation_post_process): MovingAverageMinMaxObserver(min_val=inf, max_val=-inf)
+  )
+)
+Epoch 1/5  loss 0.0266  train(fake-quant) 99.26%  test INT8 93.82%
+Epoch 2/5  loss 0.0245  train(fake-quant) 99.33%  test INT8 93.99%
+Epoch 3/5  loss 0.0244  train(fake-quant) 99.32%  test INT8 93.98%
+  froze BatchNorm statistics
+Epoch 4/5  loss 0.0179  train(fake-quant) 99.54%  test INT8 93.98%
+  froze quantizer observers (scale / zero-point)
+Epoch 5/5  loss 0.0158  train(fake-quant) 99.59%  test INT8 93.92%
+QAT INT8 test accuracy: 93.92%
+Saved QAT model -> /home/syedmalyun/Code/Semester_Archive/Semester-7/ECIS/Theory/Assignments/Assignment-3/models/qat_int8_resnet18.pt  (10.77 MB)
+  reloaded TorchScript accuracy: 93.92%

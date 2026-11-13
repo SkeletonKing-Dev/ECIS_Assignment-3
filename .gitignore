@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Environment
+.venv/
+venv/
+uv.lock
+
+# Dataset
+data/
+
+# Generated outputs (large binaries; regenerate with scripts/run_all.sh)
+# models/
+# onnx_models/
+# logs/
+# results/
+# REPORT.md
+REPORT.pdf
+
+# Temporary files from ONNX export / quantization
+*_tmp.onnx
+augmented_model.onnx
+
+# Submission archives
+*.zip
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
